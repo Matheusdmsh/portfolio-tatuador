@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html class="dark" lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>GABRIEL JUAN | Portfólio</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;700;800&family=Inter:wght@300;400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <!-- SEU CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "tertiary": "#ff725e",
+            "secondary-container": "#3c3b3b",
+            "on-secondary-fixed": "#403f3f",
+            "on-primary-fixed": "#3e4040",
+            "on-secondary": "#202020",
+            "on-tertiary-fixed": "#000000",
+            "on-surface-variant": "#acabaa",
+            "background": "#0e0e0e",
+            "tertiary-fixed": "#f45440",
+            "error": "#ee7d77",
+            "on-primary": "#3f4041",
+            "on-tertiary-container": "#110000",
+            "surface-variant": "#262626",
+            "surface-bright": "#2c2c2c",
+            "on-secondary-container": "#c1bfbe",
+            "on-tertiary": "#4a0000",
+            "on-secondary-fixed-variant": "#5c5b5b",
+            "surface-container-low": "#131313",
+            "primary-fixed-dim": "#d4d4d4",
+            "on-tertiary-fixed-variant": "#340000",
+            "on-error-container": "#ff9993",
+            "surface": "#0e0e0e",
+            "primary-dim": "#b8b9b9",
+            "outline": "#767575",
+            "inverse-surface": "#fcf8f8",
+            "outline-variant": "#484848",
+            "surface-container-highest": "#262626",
+            "secondary-fixed-dim": "#d6d4d3",
+            "tertiary-fixed-dim": "#e24735",
+            "inverse-primary": "#5e5f60",
+            "surface-container": "#1a1919",
+            "on-surface": "#e7e5e4",
+            "error-dim": "#bb5551",
+            "primary-fixed": "#e2e2e2",
+            "secondary-dim": "#9f9d9d",
+            "on-primary-fixed-variant": "#5a5c5c",
+            "tertiary-dim": "#ff725e",
+            "on-error": "#490106",
+            "error-container": "#7f2927",
+            "surface-container-lowest": "#000000",
+            "secondary-fixed": "#e5e2e1",
+            "primary-container": "#454747",
+            "primary": "#c6c6c7",
+            "surface-tint": "#c6c6c7",
+            "tertiary-container": "#f45440",
+            "secondary": "#9f9d9d",
+            "surface-container-high": "#202020",
+            "inverse-on-surface": "#565554",
+            "on-background": "#e7e5e4"
+          },
+          fontFamily: {
+            "headline": ["Manrope"],
+            "body": ["Inter"],
+            "label": ["Inter"],
+
+            "display": ["Bebas Neue"],
+            "tattoo": ["Oswald"],
+            "classic": ["Cinzel"],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-background text-on-surface selection:bg-tertiary selection:text-white antialiased">
+
+<!-- Ink Texture Overlay -->
+<div class="fixed inset-0 ink-texture z-[60] pointer-events-none"></div>
+
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/90 backdrop-blur-md shadow-[0px_24px_48px_rgba(0,0,0,0.5)] border-b border-white/5">
+
+<div class="flex justify-between items-center px-6 md:px-8 py-4 md:py-6 max-w-full mx-auto">
+  
+  <div class="text-xl md:text-2xl font-black tracking-tighter text-[#e7e5e4] font-headline uppercase">
+    Gabriel Juan
+  </div>
+
+  <!-- Desktop Nav -->
+  <div class="hidden lg:flex items-center gap-10">
+    <a class="font-manrope text-sm tracking-tight font-bold uppercase text-[#c6c6c7] hover:text-[#e7e5e4] transition-all duration-200" href="#home">Home</a>
+    <a class="font-manrope text-sm tracking-tight font-bold uppercase text-[#acabaa] hover:text-[#e7e5e4] transition-all duration-200" href="#galeria">Galeria</a>
+    <a class="font-manrope text-sm tracking-tight font-bold uppercase text-[#acabaa] hover:text-[#e7e5e4] transition-all duration-200" href="#sobre">Sobre</a>
+    <a class="font-manrope text-sm tracking-tight font-bold uppercase text-[#acabaa] hover:text-[#e7e5e4] transition-all duration-200" href="#servicos">Serviços</a>
+  </div>
+
+  <div class="flex items-center gap-4">
+    <a class="hidden sm:block bg-primary text-on-primary px-6 py-3 font-headline font-bold uppercase text-xs tracking-widest active:scale-95 duration-150 transition-all hover:bg-primary-dim" href="https://wa.me/5534999311204" target="_blank">
+      Agende sua Sessão
+    </a>
+    <!-- Mobile Menu Button -->
+    <button class="lg:hidden text-on-surface p-2 focus:outline-none z-[70]" id="menu-btn">
+    <span class="material-symbols-outlined text-3xl" id="menu-icon">menu</span>
+    </button>
+  </div>
+</div>
+
+</nav>
+<!-- Mobile Side Menu -->
+<div class="fixed inset-0 bg-[#0e0e0e] z-[65] lg:hidden hidden flex flex-col pt-32 px-10 gap-8" id="mobile-menu">
+  <a class="mobile-link text-4xl font-headline font-extrabold tracking-tighter uppercase" href="#home">Home</a>
+  <a class="mobile-link text-4xl font-headline font-extrabold tracking-tighter uppercase" href="#galeria">Galeria</a>
+  <a class="mobile-link text-4xl font-headline font-extrabold tracking-tighter uppercase" href="#sobre">Sobre</a>
+  <a class="mobile-link text-4xl font-headline font-extrabold tracking-tighter uppercase" href="#servicos">Serviços</a>
+
+  <div class="mt-auto pb-20">
+    <a class="block w-full bg-primary text-on-primary text-center px-6 py-5 font-headline font-bold uppercase text-sm tracking-widest" href="https://wa.me/5534999311204" target="_blank">
+      Agendar Sessão
+    </a>
+  </div>
+
+</div>
+
+<main>
+<!-- Section 1: Home -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden py-20" id="home">
+
+<div class="absolute inset-0 z-0">
+  <img 
+    alt="Tattooing process" 
+    class="w-full h-full object-cover object-center grayscale opacity-70" 
+    src="imagens/foto juan2.png"
+
+  />  
+  <div class="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background"></div>
+  <div class="absolute inset-0 bg-background/60"></div>
+</div>
+
+<div class="relative z-10 container mx-auto px-6 flex flex-col items-center text-center">
+
+  <div class="mb-8 w-40 md:w-56 opacity-90">
+    <img alt="Gabriel Juan Logo" class="w-full h-auto invert" src="imagens/GJ  letras@3x.png"/>
+  </div>
+
+  <h1 class="font-display text-5xl md:text-8xl font-extrabold tracking-tighter text-on-surface mb-2 uppercase">
+    GABRIEL JUAN
+  </h1>
+              
+  <div 
+    class="font-tattoo text-2xl 
+    md:text-4xl text-primary-dim 
+    tracking-[0.2em] uppercase font-light mb-8">
+    Tatuador
+
+  </div>
+
+  <div 
+    class="font-classic 
+    text-xl md:text-4xl lg:text-2x1
+    -mt-4 md:-mt-6 
+    text-gray-400 tracking-wide 
+    text-center max-w-3xl mx-auto
+    mb-6">
+    Você merece uma arte autêntica e com presença!
+  </div>
+
+  <p 
+    class="font-display
+    text-on-surface-variant 
+    text-xl md:text-2xl lg:text-2xl 
+    tracking-[0.2em] md:tracking-[0.3em] 
+    uppercase font-bold mb-12 max-w-xl md:max-w-4xl">
+    Blackwork • Bold & Fineline • Anime • Pontilhismo
+  </p>
+  
+  <div class="flex flex-col md:flex-row gap-4 md:gap-6 mb-12 w-full max-w-xs md:max-w-none">
+    
+    <a class="bg-primary text-on-primary px-8 md:px-12 py-5 font-headline font-extrabold uppercase text-xs md:text-sm tracking-[0.15em] hover:bg-white transition-all duration-300 w-full md:w-auto" href="https://wa.me/5534999311204" target="_blank">
+      Agende sua Sessão
+    </a>
+
+    <a class="border border-outline-variant/30 text-primary px-8 md:px-12 py-5 font-headline font-extrabold uppercase text-xs md:text-sm tracking-[0.15em] hover:bg-surface-container-high transition-all duration-300 backdrop-blur-sm w-full md:w-auto" href="#galeria">
+      Ver Galeria
+    </a>
+
+  </div>
+
+  <!-- Social Icons -->
+  <div class="flex items-center gap-8 opacity-70 hover:opacity-100 transition-opacity duration-300">
+
+    <!-- WhatsApp -->
+    <a class="text-primary-dim hover:text-white transition-colors duration-300" href="https://wa.me/5534999311204" target="_blank">
+      <img alt="WhatsApp" class="w-10 h-10 object-contain invert" src="imagens/whatsapp.png"/>
+    </a>
+
+    <!-- Instagram -->
+    <a class="text-primary-dim hover:text-white transition-colors duration-300" href="https://instagram.com/gabrieljuan.tattoo" target="_blank">
+      <img alt="Instagram" class="w-10 h-10 object-contain invert" src="imagens/instagram.png"/>
+    </a>
+
+    <!-- TikTok -->
+    <a class="text-primary-dim hover:text-white transition-colors duration-300" href="https://www.tiktok.com/@gabrieljuaan.tattoo?lang=pt-BR" target="_blank">
+      <img alt="TikTok" class="w-10 h-10 object-contain invert" src="imagens/tiktok-circle.png"/>
+    </a>
+
+  </div>
+</div>
+
+</section>
+<!-- Section 2: Galeria -->
+<section class="py-20 md:py-32 px-6 md:px-8 bg-surface-container-low" id="galeria">
+  <header class="max-w-7xl mx-auto mb-12 md:mb-24">
+    <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 md:gap-8 text-center lg:text-left">
+      <div class="space-y-4">
+        <span class="text-tertiary font-bold tracking-[0.2em] uppercase text-xs">Portfólio</span>
+        <h2 class="font-headline text-4xl md:text-7xl font-extrabold tracking-tighter text-on-surface uppercase leading-none">Cada Traço Conta uma História</h2>
+      </div>
+      <div class="flex items-center justify-center lg:justify-start gap-6 pb-2">
+        <button class="whitespace-nowrap font-manrope text-sm font-bold uppercase tracking-widest text-on-surface border-b-2 border-primary pb-1">Meus trabalhos</button>
+      </div>
+    </div>
+  </header>
+  <div class="max-w-7xl mx-auto">
+    <!-- Category Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 md:gap-6">
+      
+      <!-- BlackWork Category -->
+      <div class="category-card cursor-pointer group relative aspect-square bg-surface-container overflow-hidden" data-category="blackwork">
+        <img alt="BlackWork" class="w-full h-full object-cover sm:grayscale md:transition-all md:duration-700 md:group-hover:scale-105 md:group-hover:grayscale-0" src="imagens/BlackWork/BlackWork3.png"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+          <h3 class="text-white font-headline text-2xl font-extrabold tracking-tight mb-2">BlackWork</h3>
+          <span class="text-white/80 font-manrope text-sm font-bold uppercase tracking-widest flex items-center gap-2">
+            Ver coleção <span class="material-symbols-outlined text-lg">arrow_right_alt</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Pontilhismo & Geometria Category -->
+      <div class="category-card cursor-pointer group relative aspect-square bg-surface-container overflow-hidden" data-category="pontilhismo">
+        <img alt="Pontilhismo & Geometria" class="w-full h-full object-cover sm:grayscale md:transition-all md:duration-700 md:group-hover:scale-105 md:group-hover:grayscale-0" src="imagens/Pontilhismo e Geométrico/Pontilhismo2.png"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+          <h3 class="text-white font-headline text-lg font-extrabold tracking-tight mb-2">Pontilhismo & Geometria</h3>
+          <span class="text-white/80 font-manrope text-sm font-bold uppercase tracking-widest flex items-center gap-2">
+            Ver coleção <span class="material-symbols-outlined text-lg">arrow_right_alt</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Fineline & Delicado Category -->
+      <div class="category-card cursor-pointer group relative aspect-square bg-surface-container overflow-hidden" data-category="fineline">
+        <img alt="Fineline & Delicado" class="w-full h-full object-cover sm:grayscale md:transition-all md:duration-700 md:group-hover:scale-105 md:group-hover:grayscale-0" src="imagens/Fineline & Delicadas/Fineline1.jpg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+          <h3 class="text-white font-headline text-lg font-extrabold tracking-tight mb-2">Fineline & Delicado</h3>
+          <span class="text-white/80 font-manrope text-sm font-bold uppercase tracking-widest flex items-center gap-2">
+            Ver coleção <span class="material-symbols-outlined text-lg">arrow_right_alt</span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Anime Category -->
+      <div class="category-card cursor-pointer group relative aspect-square bg-surface-container overflow-hidden" data-category="anime">
+        <img alt="Anime" class="w-full h-full object-cover sm:grayscale md:transition-all md:duration-700 md:group-hover:scale-105 md:group-hover:grayscale-0" src="imagens/Anime/Anime1.jpg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+          <h3 class="text-white font-headline text-2xl font-extrabold tracking-tight mb-2">Anime</h3>
+          <span class="text-white/80 font-manrope text-sm font-bold uppercase tracking-widest flex items-center gap-2">
+            Ver coleção <span class="material-symbols-outlined text-lg">arrow_right_alt</span>
+          </span>
+        </div>
+       
+      </div>
+
+      <!-- Bold Line Category -->
+      <div class="category-card cursor-pointer group relative aspect-square bg-surface-container overflow-hidden" data-category="boldline">
+        <img alt="Bold Line" class="w-full h-full object-cover sm:grayscale md:transition-all md:duration-700 md:group-hover:scale-105 md:group-hover:grayscale-0" src="imagens/Bold Line/BoldLine 1.jpeg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+          <h3 class="text-white font-headline text-2xl font-extrabold tracking-tight mb-2">Bold Line</h3>
+          <span class="text-white/80 font-manrope text-sm font-bold uppercase tracking-widest flex items-center gap-2">
+            Ver coleção <span class="material-symbols-outlined text-lg">arrow_right_alt</span>
+          </span>
+        </div>
+
+      </div>
+
+     
+
+      <!-- Realismo Category -->
+      <div class="category-card cursor-pointer group relative aspect-square bg-surface-container overflow-hidden" data-category="realismo">
+        <img alt="Realismo" class="w-full h-full object-cover sm:grayscale md:transition-all md:duration-700 md:group-hover:scale-105 md:group-hover:grayscale-0" src="imagens/Realismo/Realismo1.jpg"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-6">
+          <h3 class="text-white font-headline text-xl font-extrabold tracking-tight mb-2">Realismo</h3>
+          <span class="text-white/80 font-manrope text-sm font-bold uppercase tracking-widest flex items-center gap-2">
+            Ver coleção <span class="material-symbols-outlined text-lg">arrow_right_alt</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-16 md:mt-24 text-center">
+      <div class="h-[1px] w-24 md:w-32 bg-outline-variant/30 mx-auto mb-10 md:mb-12"></div>
+      <a class="inline-flex items-center gap-4 text-on-surface-variant hover:text-primary transition-all duration-300 group" href="https://instagram.com/gabrieljuan.tattoo" target="_blank">
+        <span class="font-headline text-xl md:text-2xl font-bold tracking-tight">Ver mais no Instagram</span>
+        <span class="material-symbols-outlined text-2xl md:text-3xl transition-transform group-hover:translate-x-2">arrow_right_alt</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Modal Galeria por Categoria -->
+  <div id="gallery-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm overflow-y-auto">
+    <div class="min-h-screen flex items-center justify-center p-4">
+      <div class="bg-surface-container-low max-w-6xl w-full rounded-none border border-outline-variant/30 p-8 md:p-10 relative">
+        <!-- Fechar -->
+        <button id="close-modal" class="absolute top-6 right-6 text-on-surface hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-3xl">close</span>
+        </button>
+
+        <!-- Título da Categoria -->
+        <h2 id="modal-title" class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter text-on-surface mb-8 uppercase"></h2>
+
+        <!-- Grid de Imagens -->
+        <div id="modal-gallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- Section 3: Sobre -->
+<section class="py-20 md:py-32 px-6 md:px-8 relative overflow-hidden bg-background" id="sobre">
+  <!-- Large Monogram Background -->
+  <div class="absolute top-0 md:top-1/2 right-0 md:right-[-10%] md:-translate-y-1/2 w-full md:w-4/5 h-full md:h-4/5 opacity-[0.05] pointer-events-none z-0 bg-monogram"></div>
+  
+  <div class="max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-12 gap-12 md:gap-16 items-center relative z-10">
+    <div class="w-full lg:col-span-5 relative order-1 lg:order-1">
+      <div class="bg-surface-container-low aspect-[4/5] md:aspect-[3/4] overflow-hidden">
+        <img alt="Gabriel Juan Portrait" class="w-full h-full object-cover grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-1000" src="imagens/Foto Juan Sobre.png"/>
+      </div>
+    </div>
+    <div class="w-full lg:col-span-7 relative order-2 lg:order-2 text-center lg:text-left">
+      <span class="font-label text-xs md:text-sm uppercase tracking-[0.3em] text-tertiary mb-6 block font-bold">A Mente por trás da Agulha</span>
+      
+      <h2 class="font-headline text-4xl md:text-7xl font-extrabold tracking-tighter text-on-surface mb-8 md:mb-10 leading-[0.9] text-shadow-strong uppercase">
+        SOBRE O <br class="hidden md:block"/>ARTISTA
+      </h2>
+
+      <div class="space-y-6 max-w-2xl mx-auto lg:mx-0">
+        <p class="text-on-surface-variant leading-relaxed text-base md:text-lg text-shadow-strong">
+          Artista tatuador especializado em transformar ideias em artes autorais que carregam significado, identidade e expressão.
+        </p>
+
+        <p class="text-on-surface-variant leading-relaxed text-base md:text-lg text-shadow-strong">
+          Cada projeto é criado do zero, visando além da estética. O foco é entregar presença e impacto, unindo técnica, composição e sensibilidade em cada detalhe, valorizando seu corpo com um estilo único.
+        </p>
+
+        <p class="text-on-surface-variant leading-relaxed text-base md:text-lg text-shadow-strong">
+          Com um processo simples e acompanhado de perto, você participa de cada etapa até chegar a um resultado seguro, personalizado e marcante.
+        </p>
+
+        <p class="text-on-surface-variant leading-relaxed text-base md:text-lg text-shadow-strong">
+          Se busca mais do que uma tatuagem comum e quer chamar atenção com sua nova versão, é você quem eu estava esprando! 
+        </p>
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Excellence Bento -->
+  <div class="max-w-7xl mx-auto mt-24 md:mt-40">
+    <div class="mb-12 md:mb-20 text-center lg:text-left">
+      <h2 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tighter text-on-surface uppercase">Compromisso com a Excelência</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-outline-variant/10 border border-outline-variant/10">
+      
+      <div class="bg-surface-container p-8 md:p-12 hover:bg-surface-container-high transition-colors group">
+        <span class="material-symbols-outlined text-4xl text-primary mb-6 md:mb-8">sanitizer</span>
+        <h3 class="font-headline text-lg md:text-xl font-bold uppercase mb-4 text-on-surface tracking-tight">Higiene Absoluta</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Padrões assépticos e materiais de uso único de melhor qualidade para garantir sua total segurança.</p>
+      </div>
+
+      <div class="bg-surface-container p-8 md:p-12 hover:bg-surface-container-high transition-colors group">
+        <span class="material-symbols-outlined text-4xl text-primary mb-6 md:mb-8">architecture</span>
+        <h3 class="font-headline text-lg md:text-xl font-bold uppercase mb-4 text-on-surface tracking-tight">Qualidade Técnica</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Domínio de pigmentação com uso dos melhores materiais do mercado, garantindo melhor sicatrização e durabilidade. Assistência e orientação particular pré e pós sessão.</p>
+      </div>
+
+      <div class="bg-surface-container p-8 md:p-12 hover:bg-surface-container-high transition-colors group">
+        <span class="material-symbols-outlined text-4xl text-primary mb-6 md:mb-8">auto_awesome</span>
+        <h3 class="font-headline text-lg md:text-xl font-bold uppercase mb-4 text-on-surface tracking-tight">Arte Autoral</h3>
+        <p class="text-on-surface-variant text-sm leading-relaxed">Projetos completos exclusivos, criados sob medida para cada anatomia, sempre preservando a identidade única.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- The Sanctuary -->
+  <div class="max-w-7xl mx-auto mt-24 md:mt-40">
+    <div class="flex flex-col lg:flex-row justify-between lg:items-end mb-12 md:mb-16 gap-6 md:gap-8 text-center lg:text-left">
+      
+      <div class="max-w-xl mx-auto lg:mx-0">
+        <span class="font-label text-xs uppercase tracking-[0.3em] text-on-surface-variant mb-4 md:mb-6 block">O SANTUÁRIO</span>
+        <h3 class="font-headline text-4xl md:text-6xl font-extrabold tracking-tighter text-on-surface uppercase leading-none text-shadow-strong">O Estúdio</h3>
+      </div>
+
+      <p class="text-on-surface-variant max-w-sm mb-2 text-shadow-strong mx-auto lg:mx-0">
+        Um ambiente projetado para o conforto e a concentração. Nosso espaço une design minimalista e infraestrutura de ponta.
+      </p>
+    </div>
+
+    <!-- Studio Grid: 1x3 on mobile, 3x1 on desktop -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div class="aspect-square bg-surface-container overflow-hidden">
+        <img alt="Studio Interior 1" class="w-full h-full object-cover opacity-70 hover:opacity-100 transition-opacity duration-500" src="imagens/FotoEstudio1.jpeg"/>
+      </div>
+
+      <div class="aspect-square bg-surface-container overflow-hidden">
+        <img alt="Studio Detail" class="w-full h-full object-cover opacity-70 hover:opacity-100 transition-opacity duration-500" src="imagens/FotoEstudio2.jpeg"/>
+      </div>
+
+      <div class="aspect-square bg-surface-container overflow-hidden">
+        <img alt="Studio Lounge" class="w-full h-full object-cover opacity-70 hover:opacity-100 transition-opacity duration-500" src="imagens/Fotoestudio3.jpeg"/>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: Vídeo Premium + Agendamento -->
+<section class="py-20 md:py-32 px-6 md:px-8 bg-surface-container-low" id="servicos">
+  <div class="max-w-7xl mx-auto">
+
+     <!-- Agendamento e Cuidados -->
+    <div class="grid lg:grid-cols-12 gap-16 md:gap-24">
+
+      <!-- Booking Template Section -->
+      <div class="lg:col-span-7 space-y-12">
+        <div class="border-b border-outline-variant pb-8">
+          <h2 class="text-4xl font-extrabold tracking-tighter uppercase mb-2">PRONTO PARA SUA NOVA MARCA?</h2>
+          <p class="text-on-surface-variant font-medium uppercase tracking-widest text-[10px]">Agendamentos Exclusivos &amp; Projetos Sob Medida</p>
+        </div>
+
+        <div class="space-y-10"><form id="booking-form" class="space-y-6">
+          <div class="space-y-1">
+            <label class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant" for="name">Nome Completo</label>
+            <input class="w-full bg-surface-container-high border-none border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-on-surface p-4 transition-colors placeholder:text-outline-variant" id="name" name="name" placeholder="Seu nome aqui" required="" type="text"/>
+          </div>
+
+          <div class="space-y-1">
+            <label class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant" for="estilo">Estilo Desejado</label>
+            <input class="w-full bg-surface-container-high border-none border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-on-surface p-4 transition-colors placeholder:text-outline-variant" id="estilo" name="estilo" placeholder="Descreva o estilo que você prefere" required="" type="text"/>
+          </div>
+
+          <div class="space-y-1">
+            <label class="text-[10px] uppercase font-bold tracking-widest text-on-surface-variant" for="message">Sua Ideia / Mensagem</label>
+            <textarea class="w-full bg-surface-container-high border-none border-b-2 border-outline-variant focus:border-primary focus:ring-0 text-on-surface p-4 transition-colors placeholder:text-outline-variant resize-none" id="message" name="message" placeholder="Descreva sua ideia, local do corpo e tamanho aproximado..." required="" rows="4"></textarea>
+          </div>
+
+          <div class="pt-4">
+            <button class="w-full md:w-auto bg-primary text-on-primary px-10 py-5 font-manrope text-sm font-extrabold uppercase tracking-[0.2em] hover:bg-primary-dim active:scale-95 transition-all duration-300 text-center shadow-[0px_20px_40px_rgba(0,0,0,0.3)]" type="submit">
+              AGENDAR VIA WHATSAPP
+            </button>
+          </div>
+        </form></div>
+      </div>
+
+      <!-- Aftercare Guide -->
+      <div class="lg:col-span-5 space-y-12">
+        <div class="bg-surface-container p-8 md:p-12 border-l-4 border-tertiary">
+          <h3 class="font-headline font-extrabold text-2xl md:text-3xl tracking-tighter uppercase mb-8">Cuidados pré-tattoo</h3>
+          <ul class="space-y-6 text-on-surface-variant">
+            <li class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-tertiary text-xl flex-shrink-0">check_circle</span>
+              <span class="text-sm">Manter a pele bem hidratada nos dias que antecedem a tatuagem contribui diretamente para uma melhor aplicação e cicatrização,
+                você consegue isso tomando bastante água e usando produtos dermatológicos hidratantes.</span>
+            </li>
+
+            <li class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-tertiary text-xl flex-shrink-0">check_circle</span>
+              <span class="text-sm">Evite exposições desnecessárias com riscos de ferimentos ou insolações, uma pele sensibilizada ou queimada pode comprometer 
+                o resultado final. No dia da sessão, não utilize cremes ou óleos sobre a região, garantindo que a pele esteja natural e pronta para o procedimento.
+              </span>
+            </li>
+
+            <li class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-tertiary text-xl flex-shrink-0">check_circle</span>
+              <span class="text-sm">Escolha roupas confortáveis e estratégicas, que facilitam o acesso à área a ser tatuada e de preferência cor escura para evitar manchas de tinta.</span>
+            </li>
+
+          </ul>
+          
+          <a class="mt-10 block text-center bg-tertiary text-on-tertiary px-8 py-4 font-bold uppercase tracking-widest text-xs hover:bg-tertiary-fixed transition-colors" href="https://wa.me/5534999311204" target="_blank">Dúvida sobre?</a>
+        
+        </div>
+      </div>
+    </div>
+    
+    <!-- Vídeo Premium -->
+    <div class="relative mt-20 md:mt-32 mb-12 md:mb-16" id="video-section">
+      <!-- Título da seção -->
+      <div class="container mx-auto px-1 text-center max-w-3xl mb-10 md:mb-14">
+        <h2 class="font-headline text-4xl md:text-7xl font-extrabold tracking-tighter text-on-surface mb-4 md:mb-6 uppercase leading-none">
+          O Processo em Ação
+        </h2>
+        <p class="text-on-surface-variant text-base md:text-lg">
+          Veja cada detalhe do meu trabalho, da precisão da linha até o acabamento perfeito.
+        </p>
+      </div>
+
+      <div class="relative w-full overflow-hidden bg-background">
+        <video 
+          autoplay 
+          muted 
+          loop 
+          class="w-full h-auto max-h-[700px] mx-auto block"
+          playsinline>
+          <source src="imagens/loopJuan.mp4" type="video/mp4"/>
+          Seu navegador não suporta vídeo HTML5.
+        </video>
+        <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+      </div>
+    </div>
+
+   
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="py-20 md:py-32 px-6 md:px-8 bg-surface-container-lowest/40 backdrop-blur-md">
+  <div class="max-w-4xl mx-auto text-center border border-outline-variant/15 p-10 md:p-20">
+    
+    <h3 class="font-headline text-3xl md:text-4xl font-extrabold tracking-tight text-on-surface mb-6 md:mb-8 uppercase">PRONTO PARA SUA NOVA VERSÃO?</h3>
+    
+    <p class="text-on-surface-variant text-base md:text-lg mb-10 md:mb-12 max-w-xl mx-auto">
+      Você merece uma arte autêntica e com presença. Atendimento pré-agendados para garantir dedicação exclusiva a cada projeto.
+    </p>
+    
+    <div class="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
+      <a class="bg-[#c6c6c7] text-[#3f4041] px-10 py-5 font-manrope text-xs md:text-sm tracking-widest font-bold uppercase transition-all duration-200 hover:bg-white active:scale-95 inline-block w-full sm:w-auto" href="https://wa.me/5534999311204" target="_blank">
+        Agendar via WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+<!-- Unified Footer -->
+<footer class="w-full py-16 md:py-20 px-6 md:px-8 bg-[#0e0e0e] border-t border-white/5">
+  <div class="flex flex-col md:flex-row justify-between items-center gap-12 w-full max-w-7xl mx-auto text-center md:text-left">
+    <div class="flex flex-col md:flex-row gap-6 md:gap-10 font-manrope text-[10px] md:text-xs font-bold uppercase tracking-widest">
+      <a class="text-[#acabaa] hover:text-tertiary transition-colors" href="https://instagram.com/gabrieljuan.tattoo" target="_blank">Instagram</a>
+      <a class="text-[#acabaa] hover:text-tertiary transition-colors" href="https://www.tiktok.com/@gabrieljuaan.tattoo?lang=pt-BR" target="_blank">TikTok</a>
+      <a class="text-[#acabaa] hover:text-tertiary transition-colors" href="https://wa.me/5534999311204" target="_blank">WhatsApp</a>
+      <a class="text-[#acabaa] hover:text-tertiary transition-colors" href="https://share.google/lLi9Wjf9IlK5Fjv3K">Studio Location</a>
+    </div>
+
+    <div class="flex flex-col gap-2 items-center md:items-end">
+      <div class="text-xl font-bold text-[#e7e5e4] font-headline tracking-tighter uppercase">Gabriel Juan</div>
+      <p class="font-inter text-[9px] md:text-xs tracking-wide uppercase text-[#acabaa]">© 2026 Gabriel Juan Tattoo. Mastery in Obsidian.</p>
+    </div>
+  </div>
+</footer>
+<!-- Global Scripts -->
+<script src="script.js" defer></script>
+</html>
