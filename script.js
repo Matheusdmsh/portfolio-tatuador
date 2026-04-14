@@ -39,11 +39,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const text = `Olá, Gabriel Juan! 
 
-        Me chamo *${name}* e gostaria de fazer um orçamento.
+        Me chamo *${name}*. E gostaria de fazer um orçamento.
 
-        *Estilo Desejado*: ${estilo}
+        *TAMANHO APROXIMADO OU LOCAL DO FECHAMENTO:* 
+        ${estilo}
 
-        *Ideia da tattoo:*
+        *IDEIA DA TATTO:*
         ${message}`;
         
       const waUrl = 'https://wa.me/5534999311204?text=' + encodeURIComponent(text);
