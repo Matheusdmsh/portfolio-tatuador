@@ -36,18 +36,11 @@ Este projeto é um portfolio online para um tatuador, exibindo galerias de traba
 - `script.js` - interações e comportamento
 - `imagens/` - fotos do portfólio
 
-## Sugestões para deixar o projeto mais profissional
-
-- Adicionar descrição do tatuador e serviços oferecidos
-- Incluir formulário de contato ou botão para contato via WhatsApp
-- Usar GitHub Pages para publicar o site online
-- Incluir textos didáticos sobre cada estilo de tatuagem
-- Garantir alt text nas imagens para acessibilidade
 
 ## Contato
 
-- Instagram: `@seu_instagram`
-- WhatsApp: `(xx) xxxxx-xxxx`
+- Instagram: `@gabrieljuan.tattoo`
+- WhatsApp: `(34) 99931-1204`
 
 ---
 
