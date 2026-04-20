@@ -138,14 +138,20 @@
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden py-20" id="home">
 
 <div class="absolute inset-0 z-0">
-  <img 
-    alt="Tattooing process" 
-    class="w-full h-full object-cover object-center grayscale opacity-70" 
-    src="imagens/foto juan2.png"
+  <video
+    class="w-full h-full object-cover object-center grayscale opacity-70"
+    autoplay
+    loop
+    muted
+    playsinline
+  >
+    <source src="imagens/tatuando.mp4" type="video/mp4"/>
+    Seu navegador não suporta a tag de vídeo.
+  </video>
 
-  />  
   <div class="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background"></div>
   <div class="absolute inset-0 bg-background/60"></div>
+
 </div>
 
 <div class="relative z-10 container mx-auto px-6 flex flex-col items-center text-center">
@@ -519,17 +525,33 @@
         </p>
       </div>
 
-      <div class="relative w-full overflow-hidden bg-background">
-        <video 
-          autoplay 
-          muted 
-          loop 
-          class="w-full h-auto max-h-[700px] mx-auto block"
-          playsinline>
-          <source src="imagens/loopJuan.mp4" type="video/mp4"/>
-          Seu navegador não suporta vídeo HTML5.
-        </video>
-        <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+      <div class="relative w-full overflow-hidden bg-background flex flex-col md:flex-row gap-2">
+
+        <!---Vídeo 1-->
+        <div class="realtive w-full md:w-1/2">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            class="w-full h-full object-cover max-h-[700px]">
+            <source src ="imagens/tatuando.mp4" type="video/mp4"/>
+          </video>
+          <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+        </div>
+        
+        <!---Vídeo 2-->
+        <div class="relative w-full md:w-1/2">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            class="w-full h-full object-cover max-h-[700px]">
+            <source src ="imagens/loopJuan.mp4" type="video/mp4"/>
+          </video>
+          <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+    
       </div>
     </div>
 
